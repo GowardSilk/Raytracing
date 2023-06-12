@@ -1,0 +1,21 @@
+\usepackage{tikz}
+
+\begin{tikzpicture}[x={(-0.707cm,-0.707cm)}, y={(1cm,0cm)}, z={(0cm,1cm)}]
+  % Coordinates
+  \coordinate (A) at (-1, -2, -1);
+  \coordinate (B) at (-1, 2, -1);
+  \coordinate (C) at (-1, 2, 1);
+  \coordinate (D) at (-1, -2, 1);
+
+  % Axis lines
+  \draw[->] (-3, 0, 0) -- (3, 0, 0) node[left] {$z$};
+  \draw[->] (0, 0, 0) -- (0, 3, 0) node[below left] {$x$};
+  \draw[->] (0, 0, 0) -- (0, 0, 2) node[above] {$y$};
+
+  % Rectangle
+  \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+  % Center point
+  \fill (0, 0, -1) circle (2pt) node[right] {$(0, 0, -1)$};
+  \fill (0, 0, 0) circle (2pt) node[right] {$[0, 0, 0]$};
+\end{tikzpicture}
